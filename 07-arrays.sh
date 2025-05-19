@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lord_names=("venkateswara","balaji","srinivasa","govinda")
+lord_names=("venkateswara" "balaji" "srinivasa" "govinda")
 
 echo "name1 is ${lord_names[0]}"
 echo "name2 is ${lord_names[1]}"
