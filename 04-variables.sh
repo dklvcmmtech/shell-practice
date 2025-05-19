@@ -1,7 +1,7 @@
 #!/bin/bash
 
-Person1="Modi"       #No spaces before and =
-Person2="Mush"
+Person1=$1       #No spaces before and =
+Person2=$2
 
 echo "$Person1: Hi, How are you"
 echo "$Person2: I'm doing good"
