@@ -7,6 +7,7 @@ if [ $USER -ne 0 ] then
 	exit 1
 else
 	echo "Running script as root user..."
+fi
 
 dnf list installed mysql
 
@@ -18,5 +19,7 @@ if [ $? -ne 0 ] then
 	else
 		echo "Unable to install MySQL successfully, Failed"
 		exit 1
+	fi
 else
 	echo "MySQL already installed"
+fi
