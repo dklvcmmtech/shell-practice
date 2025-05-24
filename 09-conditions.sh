@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NUMBER=$1
-NUMBER=$2
+NUMBER1=$1
+NUMBER2=$2
 
 if [ $NUMBER1 -lt $NUMBER2 ]
 then
