@@ -2,7 +2,8 @@
 
 USER=$(id -u)
 
-if [ $USER -ne 0 ] then
+if [ $USER -ne 0 ] 
+then
 	echo "ERROR:: Running script as non root, Please run as root"
 	exit 1
 else
