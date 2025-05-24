@@ -15,17 +15,17 @@ then
 	echo -e "$R ERROR: Run the script as Root $N"
 	exit 1
 else
-	echo "$G Running the script as Root $N"
+	echo -e "$G Running the script as Root $N"
 fi
 
 VALIDATE(){
 
 	if [ $1 -ne 0 ]
 	then
-		echo "Error:: Installing $2 is ..... $R FAILURE $N"
+		echo -e "Error:: Installing $2 is ..... $R FAILURE $N"
 		exit 1
 	else
-		echo "Installing $2 is ...... $G SUCCESS $N"
+		echo -e "Installing $2 is ...... $G SUCCESS $N"
 	fi
 }
 
