@@ -8,13 +8,16 @@ N="\e[0m"
 
 
 SCRIPT_LOG_FOLDER="/var/log/SHELLSCRIPT-LOGS"
-SCRIPT_NAME=$(echo $1 | cut -d "." -f1)
-LOG_FILE="$SCRIPT_LOG_FOLDER/$SCRIPT_NAME.log"
+LOG_FILE_NAME=$(echo $0 | cut -d "." -f1)
+LOG_FILE="$SCRIPT_LOG_FOLDER/$LOG_FILE_NAME.log"
 
 mkdir -p SCRIPT_LOG_FOLDER
+
 echo "Script started at $(date)" | tee -a $LOG_FILE
 
 USER=$(id -u)
+
+echo "Script started at $(date)" | tee -a $LOG_FILE
 
 if [ $USER -ne 0 ]
 then
@@ -23,7 +26,6 @@ then
 else
 	echo -e "$G Running the script as Root $N" | tee -a $LOG_FILE
 fi
-
 
 VALIDATE(){
 
