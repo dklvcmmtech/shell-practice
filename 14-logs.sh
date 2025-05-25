@@ -11,13 +11,11 @@ SCRIPT_LOG_FOLDER="/var/log/SHELLSCRIPT-LOGS"
 LOG_FILE_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$SCRIPT_LOG_FOLDER/$LOG_FILE_NAME.log"
 
-mkdir -p SCRIPT_LOG_FOLDER
+mkdir -p $SCRIPT_LOG_FOLDER
 
 echo "Script started at $(date)" | tee -a $LOG_FILE
 
 USER=$(id -u)
-
-echo "Script started at $(date)" | tee -a $LOG_FILE
 
 if [ $USER -ne 0 ]
 then
