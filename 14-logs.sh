@@ -41,7 +41,7 @@ if [ $? -ne 0 ]
 then
 	echo "MySQL not installed, Installing ....." | tee -a $LOG_FILE
 	dnf install mysql -y &>> $LOG_FILE
-	VALIDATE $?, "mysql"
+	VALIDATE $?  "mysql"
 else
 	echo "MySQL already installed. No Action required" | tee -a $LOG_FILE
 fi
@@ -51,7 +51,7 @@ if [ $? -ne 0 ]
 then
 	echo "Nginx not Installed, Installing ......" | tee -a $LOG_FILE
 	dnf install nginx -y &>> $LOG_FILE
-	VALIDATE $?, "nginx"
+	VALIDATE $?  "nginx"
 else
 	echo "Nginx already installed. No Action required" | tee -a $LOG_FILE
 fi
@@ -61,7 +61,7 @@ if [ $? -ne 0 ]
 then
 	echo "Python3 not Installed, Installing ....." | tee -a $LOG_FILE
 	dnf install python3 -y &>> $LOG_FILE
-	VALIDATE $?, "python3"
+	VALIDATE $?  "python3"
 else
 	echo "Python3 already installed. No Action required" | tee -a $LOG_FILE
 fi
